@@ -587,7 +587,8 @@ client.connect_signal("unfocus", function(c) c.border_color = beautiful.border_n
 
 --Autostart applications
 --awful.spawn.with_shell("compton")
-awful.spawn.with_shell("compton --backend glx --paint-on-overlay --glx-no-stencil --vsync opengl-swc --unredir-if-possible")
+--awful.spawn.with_shell("compton --backend glx --paint-on-overlay --glx-no-stencil --vsync opengl-swc --unredir-if-possible")
+awful.spawn.with_shell("picom --backend xrender --vsync &")
 awful.spawn.with_shell("nitrogen --restore")
 awful.spawn.with_shell("nm-applet")
 awful.spawn.with_shell("volumeicon")
